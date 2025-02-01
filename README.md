@@ -1,173 +1,88 @@
-Howudoin Project
+# Howudoin Project
 
-Overview
+A mobile messaging application inspired by WhatsApp, offering seamless communication through both individual and group chats. The project is split into two primary parts: a Spring Boot backend and a React Native frontend.
 
-Howudoin is a mobile messaging application inspired by WhatsApp, designed to offer seamless communication through individual and group chats. The project is divided into two main phases: backend and frontend development.
+---
 
-Backend: Developed using Spring Boot, the backend handles user authentication, friend management, group creation, and real-time messaging functionalities. MongoDB is used for data storage.
+## Table of Contents
 
-Frontend: Built with React Native, the frontend provides a user-friendly interface for registration, friend management, and messaging, supporting both iOS and Android platforms.
+1. [Overview](#overview)  
+2. [Features](#features)  
+   - [Backend](#backend-features)  
+   - [Frontend](#frontend-features)  
+3. [Technologies Used](#technologies-used)  
+   - [Backend](#backend-technologies)  
+   - [Frontend](#frontend-technologies)  
+4. [Installation](#installation)  
+   - [Backend Setup](#backend-setup)  
+   - [Frontend Setup](#frontend-setup)  
+5. [API Endpoints](#api-endpoints)  
+   - [Public Endpoints](#public-endpoints)  
+   - [Secure Endpoints](#secure-endpoints-require-jwt-token)  
+6. [Screens and UI](#screens-and-ui)  
+7. [Contributing](#contributing)  
+8. [License](#license)
 
-Table of Contents
+---
 
-Features
+## Overview
 
-Technologies Used
+Howudoin is designed to provide a simple yet robust chat experience. Users can register, send friend requests, create chat groups, and exchange real-time messages. The backend is developed with Spring Boot and stores data in MongoDB, while the frontend is built with React Native to ensure a consistent experience across both Android and iOS devices.
 
-Installation
+---
 
-API Endpoints
+## Features
 
-Screens and UI
+### Backend Features
 
-Contributing
+- **User Registration and Login**  
+  Secure registration and login with JWT-based authentication.
+- **Friend Request System**  
+  Send, accept, and manage friend requests.
+- **Messaging System**  
+  Real-time messaging between friends.
+- **Group Management**  
+  Create groups, add members, and send group messages.
+- **MongoDB Integration**  
+  Store users, groups, and messages using flexible, document-based storage.
 
-License
+### Frontend Features
 
-Features
+- **User-Friendly Interface**  
+  Clean and simple design for smooth navigation.
+- **Real-Time Messaging**  
+  Chat interfaces that update in real time for both individual and group messages.
+- **Cross-Platform Support**  
+  Compatible with both Android and iOS devices.
 
-Backend
+---
 
-User Registration and Login: Secure registration and login with JWT-based authentication.
+## Technologies Used
 
-Friend Request System: Send, accept, and manage friend requests.
+### Backend Technologies
 
-Messaging System: Real-time messaging between friends.
+- Spring Boot
+- MongoDB
+- JWT (JSON Web Tokens)
 
-Group Management: Create groups, add members, and send group messages.
+### Frontend Technologies
 
-MongoDB Integration: Store users, groups, and messages using flexible document-based storage.
+- React Native
+- JWT Authentication
 
-Frontend
+---
 
-User-Friendly Interface: Clean and simple design for smooth navigation.
+## Installation
 
-Real-Time Messaging: Chat interfaces update in real-time for both individual and group messages.
+### Prerequisites
 
-Cross-Platform Support: Compatible with both Android and iOS devices.
+- Java 11 or later  
+- Node.js and npm  
+- MongoDB  
 
-Technologies Used
+### Backend Setup
 
-Backend
-
-Spring Boot
-
-MongoDB
-
-JWT (JSON Web Tokens)
-
-Frontend
-
-React Native
-
-JWT Authentication
-
-Installation
-
-Prerequisites
-
-Java 11 or later
-
-Node.js and npm
-
-MongoDB
-
-Backend Setup
-
-Clone the repository:
-
-git clone https://github.com/yourusername/howudoin-backend.git
-cd howudoin-backend
-
-Configure application.properties with your MongoDB connection details.
-
-Run the Spring Boot application:
-
-./mvnw spring-boot:run
-
-Frontend Setup
-
-Clone the repository:
-
-git clone https://github.com/yourusername/howudoin-frontend.git
-cd howudoin-frontend
-
-Install dependencies:
-
-npm install
-
-Run the React Native app:
-
-npx react-native run-android  # For Android
-npx react-native run-ios      # For iOS
-
-API Endpoints
-
-Public Endpoints
-
-POST /register: Register a new user (name, last name, email, password).
-
-POST /login: Authenticate and login a user (email, password).
-
-Secure Endpoints (Require JWT Token)
-
-POST /friends/add: Send a friend request.
-
-POST /friends/accept: Accept a friend request.
-
-GET /friends: Retrieve friend list.
-
-POST /messages/send: Send a message to a friend.
-
-GET /messages: Retrieve conversation history.
-
-POST /groups/create: Create a new group.
-
-POST /groups/:groupId/add-member: Add a member to a group.
-
-POST /groups/:groupId/send: Send a message to a group.
-
-GET /groups/:groupId/messages: Retrieve group message history.
-
-GET /groups/:groupId/members: Retrieve group members.
-
-Screens and UI
-
-User Registration and Login Screen
-
-Register and login using email and password.
-
-Friend Request and Friend List Screen
-
-Search for users, send friend requests, and view friend list.
-
-Messaging Screens
-
-Chat with friends and groups in real-time.
-
-View conversation history.
-
-Group Management Screens
-
-Create groups, add members, and view group details.
-
-Group messaging with real-time updates.
-
-Contributing
-
-Contributions are welcome! Please fork the repository and create a pull request.
-
-Fork the repository.
-
-Create your feature branch (git checkout -b feature/AmazingFeature).
-
-Commit your changes (git commit -m 'Add some AmazingFeature').
-
-Push to the branch (git push origin feature/AmazingFeature).
-
-Open a pull request.
-
-License
-
-This project is licensed under the MIT License.
-
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/howudoin-backend.git
+   cd howudoin-backend
